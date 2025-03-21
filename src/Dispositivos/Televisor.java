@@ -4,9 +4,9 @@ public class Televisor {
     private String marca;
     private String modelo;
     private int anioFabricacion;
-    private char tipo;
-    private boolean smart;
-    private Pantalla pantalla;
+    private char tipo; // Plasma, LCD u OLED
+    private boolean smart; // Indica si el televisor es Smart o no
+    private Pantalla pantalla; // Pantalla compartida por varios televisores
     private boolean encendido; // Estado del televisor
 
     // Constructor
@@ -53,6 +53,7 @@ public class Televisor {
             default:
                 tipoDescripcion = "Tipo desconocido";
         }
+        // Se muestra la marca, modelo, año de fabricación, pantalla, si es Smart, el tipo y si está encendido o apagado
         return marca + " " + modelo + " -- " + "Año " + anioFabricacion + " -- " + pantalla.toString() + " -- " + smartStr +
                 " -- Tipo " + tipoDescripcion + " -- Televisor " + (encendido ? "Encendido" : "Apagado");
     }

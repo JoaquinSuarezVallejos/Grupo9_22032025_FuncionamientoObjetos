@@ -2,7 +2,7 @@ package Dispositivos;
 
 public class Pantalla {
     private int pulgadas;
-    private String resolucion;
+    private String resolucion; // Ej: 4K, Full HD, HD Ready
     private int televisoresEncendidos; // Contador de televisores encendidos
 
     // Constructor
@@ -24,13 +24,14 @@ public class Pantalla {
         }
     }
 
-    // La pantalla solo se apaga si no hay televisores encendidos
+    // La pantalla solo se apaga si ambos televisores están apagados
     public boolean isEncendida() {
         return televisoresEncendidos > 0;
     }
 
     @Override
     public String toString() {
+        // Se muestra el número de pulgadas, la resolución y si la pantalla está encendida o apagada
         return pulgadas + " pulgadas -- " + resolucion + " -- " + (isEncendida() ? "Pantalla Compartida Encendida" : "Pantalla Compartida Apagada");
     }
 }

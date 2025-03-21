@@ -3,14 +3,14 @@ import Dispositivos.Televisor;
 
 public class Main {
     public static void main(String[] args) {
-        // Se crea un objeto Pantalla que será compartido por dos televisores
+        // Se crea un objeto Pantalla que va a ser compartido por dos televisores
         Pantalla pantallaCompartida = new Pantalla(65, "4K");
 
         // Creación de dos televisores que comparten la misma pantalla
         Televisor tv1 = new Televisor("LG", "55CX", 2021, 'O', true, pantallaCompartida);
         Televisor tv2 = new Televisor("Sony", "BraviaX85", 2022, 'L', true, pantallaCompartida);
 
-        // Mostrar estado inicial de los televisores y la pantalla
+        // Mostrar el estado inicial de los televisores y la pantalla
         System.out.println("Estado inicial:");
         System.out.println(tv1);
         System.out.println(tv2);
