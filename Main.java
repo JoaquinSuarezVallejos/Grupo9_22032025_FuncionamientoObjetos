@@ -1,5 +1,5 @@
-import Dispositivos.Pantalla;
-import Dispositivos.Televisor;
+import dispositivos.Pantalla;
+import dispositivos.Televisor;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,6 +36,13 @@ public class Main {
         // Apagar el primer televisor
         System.out.println("\nApagando tv1...");
         tv1.apagar();
+        System.out.println(tv1);
+        System.out.println(tv2);
+        
+        // Modificar la pantalla compartida
+        System.out.println("\nModificando la pantalla compartida...");
+        pantallaCompartida.setPulgadas(75);
+        pantallaCompartida.setResolucion("8K");
         System.out.println(tv1);
         System.out.println(tv2);
     }

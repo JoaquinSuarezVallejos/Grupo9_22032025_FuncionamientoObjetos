@@ -1,8 +1,8 @@
-package Dispositivos;
+package dispositivos;
 
 public class Pantalla {
     private int pulgadas;
-    private String resolucion; // Ej: 4K, Full HD, HD Ready
+    private String resolucion; // Ej: 4K, Full HD, HD, etc
     private int televisoresEncendidos; // Contador de televisores encendidos
 
     // Constructor
@@ -12,6 +12,14 @@ public class Pantalla {
         this.televisoresEncendidos = 0; // Al inicio, ningún televisor está encendido
     }
 
+    public void setPulgadas(int pulgadas) {
+        this.pulgadas = pulgadas;
+    }
+    
+    public void setResolucion(String resolucion) {
+        this.resolucion = resolucion;
+    }
+    
     // Método para encender la pantalla (aumenta el contador de televisores encendidos)
     public void encender() {
         televisoresEncendidos++;
